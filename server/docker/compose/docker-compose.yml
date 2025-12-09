@@ -1,9 +1,14 @@
+version: '3'
+
 services:
   backend:
-    build: ./srv
+    build:
+      context: ./srv
     ports:
       - "8000:8000"
-  fontend:
-    build: ./frontend
+    hostname: backend
+  frontend:
+    build:
+      context: ./frontend
     ports:
       - "80:3000"

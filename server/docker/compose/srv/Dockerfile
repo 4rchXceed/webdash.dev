@@ -1,4 +1,3 @@
-ARG ALLOWED_ORIGIN
 FROM alpine:latest
 
 RUN apk --no-cache add python3 py3-pip git
@@ -16,11 +15,9 @@ RUN pip install -r requirements.txt
 RUN chmod +x tokengen.sh start.sh
 RUN ./tokengen.sh
 
-RUN if [ -n "$ALLOWED_ORIGIN" ]; then echo "FRONTEND_URL=$ALLOWED_ORIGIN" >> .env; fi
-
 RUN cp ./start.sh /start.sh
 RUN chmod +x /start.sh
 
 EXPOSE 8000
 
-RUN ["/start.sh"]
+CMD ["/start.sh"]
