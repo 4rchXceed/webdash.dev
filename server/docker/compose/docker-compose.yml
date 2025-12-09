@@ -1,0 +1,9 @@
+services:
+  backend:
+    build: ./srv
+    ports:
+      - "8000:8000"
+  fontend:
+    build: ./frontend
+    ports:
+      - "80:3000"

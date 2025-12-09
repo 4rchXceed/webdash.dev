@@ -1,0 +1,48 @@
+node_modules
+# I use node_modules.linux or win, when at school without internet
+node_modules.*
+
+build
+# Output
+.ignore
+.output
+.vercel
+.netlify
+.wrangler
+.svelte-kit
+
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*
+!.env.example
+!.env.test
+
+# Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+.vscode
+
+.venv
+.env
+__pycache__
+*.pyc
+.ignore
+server/db/images/*
+!server/db/images/.keep
+server/config/*
+!server/config/.keep
+.venv
+.env
+__pycache__
+*.pyc
+.ignore
+db/images/*
+!db/images/.keep
+config/*
+!config/.keep

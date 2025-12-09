@@ -1,0 +1,42 @@
+@font-face {
+    font-family: "Source Code Pro";
+    font-style: italic;
+    font-weight: 100 900;
+    src: url("/fonts/Source_Code_Pro/SourceCodePro-VariableFont_wght.ttf") format("truetype");
+}
+
+:root {
+    --bg-secondary: #111111;
+    --bg-primary: #141414;
+    --bg-inverted: var(--text-primary);
+    --bg-button: #464646;
+    --text-primary: #ffffff;
+    --text-secondary: #ffffff;
+    --text-inverted: var(--bg-primary);
+    --border-primary: #ffffff;
+    --border-secondary: #ffffff;
+    --font-family: 'Source Code Pro', Tahoma, Geneva, Verdana, sans-serif;
+    --img-filter: saturate(.5);
+}
+
+
+/* :root {
+    --bg-secondary: #222;
+    --bg-primary: #242424a4;
+    --bg-inverted: #ffffff;
+    --text-primary: #ffffff;
+    --text-inverted: #000000;
+    --font-family: 'Source Code Pro', Tahoma, Geneva, Verdana, sans-serif;
+    --img-filter: saturate(0.3);
+} */
+
+.bg-img {
+    /* I put it there so it applies to all images, if it was on +layout it wouldn't have worked */
+    filter: var(--img-filter);
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-family);
+}
