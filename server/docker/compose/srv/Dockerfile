@@ -13,11 +13,12 @@ RUN python3 -m venv .venv
 ENV PATH="/app/server/.venv/bin:$PATH"
 RUN pip install -r requirements.txt
 
-RUN tokengen.sh
+RUN chmod +x tokengen.sh start.sh
+RUN ./tokengen.sh
 
 RUN if [ -n "$ALLOWED_ORIGIN" ]; then echo "FRONTEND_URL=$ALLOWED_ORIGIN" >> .env; fi
 
-COPY start.sh /start.sh
+RUN cp ./start.sh /start.sh
 RUN chmod +x /start.sh
 
 EXPOSE 8000
