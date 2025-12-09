@@ -9,7 +9,7 @@ RUN git clone https://github.com/4rchXceed/webdash.dev.git .
 WORKDIR /app/client
 
 
-RUN echo "export const API_URL = 'http://backend:8000';" > ./src/lib/globals.ts
+COPY globals.ts ./src/lib/globals.ts
 
 RUN npm install
 RUN npm run build
