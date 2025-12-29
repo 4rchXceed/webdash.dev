@@ -686,6 +686,9 @@
   }
 
   @media screen and (max-width: 1000px) {
+    .margin-right {
+      margin-right: 0;
+    }
     header {
       background-size: cover !important;
     }
